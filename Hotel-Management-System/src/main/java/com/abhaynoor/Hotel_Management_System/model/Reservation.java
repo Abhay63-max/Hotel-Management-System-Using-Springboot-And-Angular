@@ -2,6 +2,8 @@ package com.abhaynoor.Hotel_Management_System.model;
 
 import java.util.Date;
 
+import com.abhaynoor.Hotel_Management_System.enumeration.ReservationStatus;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -24,6 +26,7 @@ public class Reservation {
 	private Room room;
 	private Date checkInDate;
 	private Date checkOutDate;
+	private ReservationStatus reservationStatus;
 	
 	public Long getId() {
 		return id;
@@ -55,5 +58,10 @@ public class Reservation {
 	public void setCheckOutDate(Date checkOutDate) {
 		this.checkOutDate = checkOutDate;
 	}
-	
+	public ReservationStatus getReservationStatus() {
+		return reservationStatus;
+	}
+	public void setReservationStatus(ReservationStatus reservationStatus) {
+		this.reservationStatus = reservationStatus;
+	}
 }
